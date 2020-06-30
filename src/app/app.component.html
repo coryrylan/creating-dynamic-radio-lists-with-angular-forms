@@ -1,0 +1,14 @@
+<a href="">
+  <h1>Dynamic Radio List in Angular</h1>
+</a>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+  <label *ngFor="let order of orders">
+    <input formControlName="orders" type="radio" name="orders" [value]="order.id" />
+    {{order.name}}
+  </label>
+
+  <br>
+  <button>submit</button>
+</form>
